@@ -12,40 +12,42 @@
     background-color: #ffffff;
   }
 
-  nav {
-    background-color: #4AC6B7; /* טורקיז רך */
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    display: flex;
-    justify-content: space-between; /* הלוגו והכפתורים מקצוות שונים */
-    align-items: center;
-    padding: 10px 20px;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-  }
+nav {
+  background-color: #4AC6B7; /* אותו צבע טורקיז אחיד לרקע סרגל */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
 
-  nav .logo {
-    height: 70px;
-  }
+nav .logo {
+  height: 95px; /* הגדלתי לוגו */
+  cursor: pointer;
+}
 
-  nav .menu {
-    display: flex;
-    gap: 2rem;
-  }
+nav .menu {
+  display: flex;
+  gap: 2rem;
+}
 
-  nav a {
-    color: white;
-    text-decoration: none;
-    font-weight: 700;
-    padding: 8px 15px;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-  }
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 700;
+  padding: 8px 15px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
 
-  nav a:hover {
-    background-color: #389b93; /* ירוק טורקיז כהה יותר */
-    color: white;
-  }
+nav a:hover {
+  background-color: #389b93;
+  color: white;
+}
+
 
   /* וידאו רקע */
   .video-background {
