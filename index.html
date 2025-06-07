@@ -1,103 +1,101 @@
 <!DOCTYPE html>
 <html lang="he">
 <head>
-  <meta charset="UTF-8">
-  <title>Travel Siam - מטיילים ללא דאגות</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>טראוול סיאם</title>
   <style>
-    body, html {
+    body {
       margin: 0;
-      padding: 0;
       direction: rtl;
-      font-family: sans-serif;
-      color: white;
-      overflow-x: hidden;
+      font-family: Arial, sans-serif;
+      overflow-x: hidden; /* למנוע גלילה אופקית */
+      background: white;
+      color: #222;
     }
+
+    /* סרטון בגודל מוגבל */
     .video-container {
       position: relative;
       width: 100%;
-      height: 100vh;
+      max-height: 500px; /* גובה מקסימלי לסרטון */
       overflow: hidden;
     }
-    .video-container video {
-      position: absolute;
-      top: 0;
-      left: 0;
+
+    video {
       width: 100%;
-      height: 100%;
+      height: auto;
+      max-height: 500px;
+      display: block;
       object-fit: cover;
     }
+
+    /* סרגל ניווט שקוף על הסרטון */
     nav {
       position: absolute;
       top: 0;
       right: 0;
       left: 0;
+      height: 60px;
+      background: rgba(0,0,0,0.35); /* שקיפות שחור */
       display: flex;
       align-items: center;
-      justify-content: space-between;
-      padding: 1rem 2rem;
-      background: transparent;
-      z-index: 2;
+      justify-content: center; /* מרכז את קישורי הניווט */
+      gap: 2rem;
+      z-index: 10;
+      color: white;
+      font-weight: bold;
+      padding: 0 100px; /* רווח פנימי משני הצדדים כדי ללפפות את הלוגו */
+      box-sizing: border-box;
     }
-    nav img {
-      height: 60px;
-    }
-    nav ul {
-      display: flex;
-      gap: 1.5rem;
-      list-style: none;
-      margin: 0;
-      padding: 0;
-    }
-    nav ul li a {
+
+    nav a {
       color: white;
       text-decoration: none;
       font-size: 1.1rem;
+      transition: color 0.3s;
     }
-    .hero-text {
+    nav a:hover {
+      color: #ff8c42;
+    }
+
+    /* לוגו מצד ימין בתוך הניווט */
+    nav .logo {
       position: absolute;
-      top: 50%;
-      right: 50%;
-      transform: translate(50%, -50%);
-      text-align: center;
-      z-index: 2;
+      right: 20px;
+      top: 8px;
+      height: 45px;
+      width: auto;
     }
-    .hero-text h1 {
-      font-size: 4rem;
-      margin: 0;
-    }
-    .hero-text p {
-      font-size: 1.6rem;
-      margin-top: 0.5rem;
+
+    /* תוכן האתר מתחת לסרטון */
+    main {
+      max-width: 1000px;
+      margin: 1rem auto;
+      padding: 0 1rem;
     }
   </style>
 </head>
 <body>
-
   <div class="video-container">
-    <video autoplay muted loop playsinline>
-      <source src="video.mp4" type="video/mp4">
-    </video>
-
     <nav>
-      <img src="logo.png" alt="Travel Siam">
-      <ul>
-        <li><a href="#">דף הבית</a></li>
-        <li><a href="#">יעדים</a></li>
-        <li><a href="#">מלונות</a></li>
-        <li><a href="#">טיסות</a></li>
-        <li><a href="#">אטרקציות</a></li>
-        <li><a href="#">העברות</a></li>
-        <li><a href="#">צור קשר</a></li>
-      </ul>
+      <a href="#home">בית</a>
+      <a href="#destinations">יעדים</a>
+      <a href="#hotels">מלונות</a>
+      <a href="#flights">טיסות</a>
+      <img src="logo.png" alt="Travel Siam" class="logo" />
     </nav>
 
-    <div class="hero-text">
-      <h1>Travel Siam</h1>
-      <p>מטיילים ללא דאגות</p>
-    </div>
+    <video autoplay muted loop playsinline>
+      <source src="video.mp4" type="video/mp4" />
+      הדפדפן שלך לא תומך בווידאו.
+    </video>
   </div>
 
+  <main>
+    <h1>ברוכים הבאים לטראוול סיאם</h1>
+    <p>האתר המוביל לטיולים מותאמים אישית בתאילנד...</p>
+    <!-- שאר התוכן כאן -->
+  </main>
 </body>
 </html>
