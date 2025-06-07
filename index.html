@@ -2,52 +2,102 @@
 <html lang="he">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Travel Siam - מטיילים ללא דאגות</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
   <style>
-    body, html { margin: 0; padding: 0; direction: rtl; font-family: sans-serif; }
-    .video-container { position: relative; overflow: hidden; height: 100vh; }
-    .video-container video { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: -1; }
-    .navbar { position: absolute; top: 0; width: 100%; display: flex; align-items: center; justify-content: space-between; padding: 0.5rem 2rem; box-sizing: border-box; z-index: 2; background: transparent; }
-    .logo { display: flex; align-items: center; }
-    .logo img { height: 60px; margin-left: 0.5rem; }
-    .nav-links { display: flex; gap: 1rem; }
-    .nav-links a { color: white; text-decoration: none; font-size: 1.1rem; transition: 0.3s; }
-    .nav-links a:hover { text-decoration: underline; }
-    .hero-text { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: white; text-align: center; z-index: 2; }
-    .hero-text h1 { font-size: 4rem; margin: 0; }
-    .hero-text p { font-size: 1.5rem; margin-top: 0.5rem; }
+    body, html {
+      margin: 0;
+      padding: 0;
+      direction: rtl;
+      font-family: sans-serif;
+      color: white;
+      overflow-x: hidden;
+    }
+    .video-container {
+      position: relative;
+      width: 100%;
+      height: 100vh;
+      overflow: hidden;
+    }
+    .video-container video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    nav {
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1rem 2rem;
+      background: transparent;
+      z-index: 2;
+    }
+    nav img {
+      height: 60px;
+    }
+    nav ul {
+      display: flex;
+      gap: 1.5rem;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-size: 1.1rem;
+    }
+    .hero-text {
+      position: absolute;
+      top: 50%;
+      right: 50%;
+      transform: translate(50%, -50%);
+      text-align: center;
+      z-index: 2;
+    }
+    .hero-text h1 {
+      font-size: 4rem;
+      margin: 0;
+    }
+    .hero-text p {
+      font-size: 1.6rem;
+      margin-top: 0.5rem;
+    }
   </style>
 </head>
 <body>
 
-<div class="video-container">
-  <video autoplay muted loop playsinline>
-    <source src="video.mp4" type="video/mp4">
-  </video>
+  <div class="video-container">
+    <video autoplay muted loop playsinline>
+      <source src="video.mp4" type="video/mp4">
+    </video>
 
-  <div class="navbar">
-    <div class="logo">
-      <img src="logo.png" alt="לוגו">
-    </div>
-    <div class="nav-links">
-      <a href="#">דף הבית</a>
-      <a href="#">יעדים</a>
-      <a href="#">מלונות</a>
-      <a href="#">טיסות פנים</a>
-      <a href="#">טיסות לתאילנד</a>
-      <a href="#">אטרקציות</a>
-      <a href="#">העברות</a>
-      <a href="#">צור קשר</a>
+    <nav>
+      <img src="logo.png" alt="Travel Siam">
+      <ul>
+        <li><a href="#">דף הבית</a></li>
+        <li><a href="#">יעדים</a></li>
+        <li><a href="#">מלונות</a></li>
+        <li><a href="#">טיסות</a></li>
+        <li><a href="#">אטרקציות</a></li>
+        <li><a href="#">העברות</a></li>
+        <li><a href="#">צור קשר</a></li>
+      </ul>
+    </nav>
+
+    <div class="hero-text">
+      <h1>Travel Siam</h1>
+      <p>מטיילים ללא דאגות</p>
     </div>
   </div>
-
-  <div class="hero-text">
-    <h1>Travel Siam</h1>
-    <p>מטיילים ללא דאגות</p>
-  </div>
-</div>
 
 </body>
 </html>
