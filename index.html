@@ -12,24 +12,25 @@
     background-color: #ffffff;
   }
 
-  /* סרגל ניווט עם רקע טורקיז */
   nav {
     background-color: #4AC6B7; /* טורקיז רך */
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     display: flex;
+    justify-content: space-between; /* הלוגו והכפתורים מקצוות שונים */
     align-items: center;
-    justify-content: center;
-    gap: 2rem;
     padding: 10px 20px;
     position: sticky;
     top: 0;
     z-index: 1000;
   }
 
-  /* הלוגו בתוך הסרגל */
   nav .logo {
-    height: 70px; /* הגודל של הלוגו בשורה */
-    margin-left: 20px; /* ריווח בין הלוגו לכפתורים (בגלל RTL - זה מצד שמאל) */
+    height: 70px;
+  }
+
+  nav .menu {
+    display: flex;
+    gap: 2rem;
   }
 
   nav a {
@@ -80,18 +81,18 @@
 </head>
 <body>
 
-<!-- סרגל ניווט עם הלוגו -->
 <nav>
   <img class="logo" src="logo.png" alt="Travel Siam Logo" />
-  <a href="#destinations">יעדים</a>
-  <a href="#hotels">מלונות</a>
-  <a href="#flights-domestic">טיסות פנים</a>
-  <a href="#flights-international">טיסות לתאילנד</a>
-  <a href="#attractions">אטרקציות</a>
-  <a href="#transfers">העברות</a>
+  <div class="menu">
+    <a href="#destinations">יעדים</a>
+    <a href="#hotels">מלונות</a>
+    <a href="#flights-domestic">טיסות פנים</a>
+    <a href="#flights-international">טיסות לתאילנד</a>
+    <a href="#attractions">אטרקציות</a>
+    <a href="#transfers">העברות</a>
+  </div>
 </nav>
 
-<!-- וידאו רקע -->
 <div class="video-background">
   <video autoplay muted loop playsinline>
     <source src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.webm" type="video/webm" />
@@ -103,7 +104,6 @@
   </div>
 </div>
 
-<!-- תוכן לדוגמה -->
 <section id="destinations" style="padding: 2rem; max-width: 900px; margin: auto;">
   <h1>היעדים שלנו בתאילנד</h1>
   <p>כאן תוכל למצוא מידע על היעדים השונים בתאילנד, המלונות, האטרקציות ועוד.</p>
