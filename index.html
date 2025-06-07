@@ -12,20 +12,19 @@
     background-color: #ffffff;
   }
 
-  /* מיכל משותף לוידאו ולניווט */
   .video-wrapper {
     position: relative;
     width: 100%;
-    height: 600px; /* הגדלנו את הגובה */
+    height: 100vh; /* גובה מלא של המסך */
     overflow: hidden;
   }
 
   nav {
-    position: absolute; /* מעל הוידאו */
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    background-color: transparent; /* הסר רקע */
+    background-color: transparent; /* שקוף לחלוטין */
     display: flex;
     align-items: center;
     padding: 10px 20px;
@@ -35,7 +34,7 @@
   }
 
   .logo-container {
-    background-color: white; /* רקע לבן סביב הלוגו */
+    background-color: transparent; /* שקוף */
     padding: 5px 15px;
     display: flex;
     align-items: center;
@@ -51,12 +50,12 @@
   .menu {
     flex-grow: 1;
     display: flex;
-    justify-content: center; /* מרכז את שורת הכפתורים */
+    justify-content: center;
     gap: 2rem;
   }
 
   nav a {
-    color: black; /* שחור לכפתורים */
+    color: white; /* לבן */
     text-decoration: none;
     font-weight: 700;
     padding: 8px 15px;
@@ -65,8 +64,8 @@
   }
 
   nav a:hover {
-    background-color: #4AC6B7; /* טורקיז בהיר בהובר */
-    color: black; /* טקסט שחור גם בהובר */
+    background-color: rgba(255 255 255 / 0.3); /* מעט בהיר בהובר */
+    color: white;
   }
 
   .video-background video {
@@ -78,12 +77,11 @@
     width: auto;
     height: auto;
     transform: translate(-50%, -50%);
-    z-index: 1; /* נמוך מהניווט */
+    z-index: 1;
     object-fit: cover;
     filter: brightness(0.75);
   }
 
-  /* טקסט מעל הוידאו */
   .video-content {
     position: relative;
     color: white;
@@ -92,10 +90,9 @@
     font-size: 2.2rem;
     font-weight: bold;
     text-shadow: 1px 1px 8px rgba(0,0,0,0.7);
-    z-index: 5; /* מעל הוידאו, מתחת לניווט */
+    z-index: 5;
   }
 
-  /* תוכן נוסף */
   section {
     padding: 2rem;
     max-width: 900px;
