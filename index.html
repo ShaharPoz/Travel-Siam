@@ -16,7 +16,7 @@
   .video-wrapper {
     position: relative;
     width: 100%;
-    height: 400px;
+    height: 600px; /* הגדלנו את הגובה */
     overflow: hidden;
   }
 
@@ -25,12 +25,12 @@
     top: 0;
     left: 0;
     width: 100%;
-    background-color: rgba(255, 255, 255, 0.85); /* לבן חצי שקוף */
+    background-color: transparent; /* הסר רקע */
     display: flex;
     align-items: center;
     padding: 10px 20px;
     z-index: 10;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    box-shadow: none;
     direction: rtl;
   }
 
@@ -88,7 +88,7 @@
     position: relative;
     color: white;
     text-align: center;
-    padding: 150px 20px 20px 20px;
+    padding: 250px 20px 20px 20px;
     font-size: 2.2rem;
     font-weight: bold;
     text-shadow: 1px 1px 8px rgba(0,0,0,0.7);
