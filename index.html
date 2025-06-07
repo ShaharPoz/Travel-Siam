@@ -12,42 +12,50 @@
     background-color: #ffffff;
   }
 
-nav {
-  background-color: #4AC6B7; /* אותו צבע טורקיז אחיד לרקע סרגל */
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 20px;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-}
+  nav {
+    background-color: #4AC6B7; /* רקע טורקיז אחיד */
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    direction: rtl;
+  }
 
-nav .logo {
-  height: 95px; /* הגדלתי לוגו */
-  cursor: pointer;
-}
+  .logo-container {
+    background-color: #4AC6B7; /* אותו צבע כמו הסרגל */
+    padding: 5px 15px;
+    display: flex;
+    align-items: center;
+    height: 90px;
+  }
 
-nav .menu {
-  display: flex;
-  gap: 2rem;
-}
+  .logo {
+    height: 85px;
+    display: block;
+  }
 
-nav a {
-  color: white;
-  text-decoration: none;
-  font-weight: 700;
-  padding: 8px 15px;
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
-}
+  .menu {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center; /* מרכז את שורת הכפתורים */
+    gap: 2rem;
+  }
 
-nav a:hover {
-  background-color: #389b93;
-  color: white;
-}
+  nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 700;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
 
+  nav a:hover {
+    background-color: #389b93;
+    color: white;
+  }
 
   /* וידאו רקע */
   .video-background {
@@ -79,12 +87,21 @@ nav a:hover {
     font-weight: bold;
     text-shadow: 1px 1px 8px rgba(0,0,0,0.7);
   }
+
+  /* תוכן נוסף */
+  section {
+    padding: 2rem;
+    max-width: 900px;
+    margin: auto;
+  }
 </style>
 </head>
 <body>
 
 <nav>
-  <img class="logo" src="logo.png" alt="Travel Siam Logo" />
+  <div class="logo-container">
+    <img class="logo" src="logo.png" alt="Travel Siam Logo" />
+  </div>
   <div class="menu">
     <a href="#destinations">יעדים</a>
     <a href="#hotels">מלונות</a>
@@ -106,7 +123,7 @@ nav a:hover {
   </div>
 </div>
 
-<section id="destinations" style="padding: 2rem; max-width: 900px; margin: auto;">
+<section id="destinations">
   <h1>היעדים שלנו בתאילנד</h1>
   <p>כאן תוכל למצוא מידע על היעדים השונים בתאילנד, המלונות, האטרקציות ועוד.</p>
 </section>
