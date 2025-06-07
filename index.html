@@ -3,86 +3,97 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>טראוול סיאם</title>
+  <title>Travel Siam - אתר תיירות לתאילנד</title>
   <style>
-    body {
-      margin: 0;
+    body, html {
+      margin: 0; padding: 0;
+      height: 100%;
       direction: rtl;
       font-family: Arial, sans-serif;
-      overflow-x: hidden; /* למנוע גלילה אופקית */
-      background: white;
-      color: #222;
+      background: #fff;
+      color: #333;
     }
-
-    /* סרטון בגודל מוגבל */
+    /* מכולת הסרטון והרקע */
     .video-container {
       position: relative;
       width: 100%;
-      max-height: 500px; /* גובה מקסימלי לסרטון */
+      height: 50vh; /* חצי גובה החלון */
       overflow: hidden;
     }
-
-    video {
-      width: 100%;
+    .video-container video {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      min-width: 100%;
+      min-height: 100%;
+      width: auto;
       height: auto;
-      max-height: 500px;
-      display: block;
+      transform: translate(-50%, -50%);
       object-fit: cover;
+      z-index: 1;
     }
 
-    /* סרגל ניווט שקוף על הסרטון */
+    /* סרגל הניווט שקוף ומרכזי */
     nav {
       position: absolute;
-      top: 0;
-      right: 0;
-      left: 0;
+      top: 0; right: 0; left: 0;
       height: 60px;
-      background: rgba(0,0,0,0.35); /* שקיפות שחור */
+      background: rgba(0,0,0,0.35);
       display: flex;
+      justify-content: center;
       align-items: center;
-      justify-content: center; /* מרכז את קישורי הניווט */
-      gap: 2rem;
-      z-index: 10;
+      gap: 2.5rem;
       color: white;
       font-weight: bold;
-      padding: 0 100px; /* רווח פנימי משני הצדדים כדי ללפפות את הלוגו */
+      padding: 0 120px;
+      z-index: 10;
       box-sizing: border-box;
     }
-
     nav a {
       color: white;
       text-decoration: none;
       font-size: 1.1rem;
-      transition: color 0.3s;
+      transition: color 0.3s ease;
     }
     nav a:hover {
       color: #ff8c42;
     }
 
-    /* לוגו מצד ימין בתוך הניווט */
+    /* מיקום הלוגו */
     nav .logo {
       position: absolute;
       right: 20px;
-      top: 8px;
-      height: 45px;
+      top: 5px;
+      height: 50px;
       width: auto;
     }
 
-    /* תוכן האתר מתחת לסרטון */
+    /* תוכן ראשי */
     main {
       max-width: 1000px;
-      margin: 1rem auto;
+      margin: 2rem auto;
       padding: 0 1rem;
+    }
+
+    /* טיפוס לכותרות ופסקאות */
+    h1 {
+      margin-bottom: 1rem;
+    }
+    p {
+      line-height: 1.6;
     }
   </style>
 </head>
 <body>
+
   <div class="video-container">
     <nav>
       <a href="#home">בית</a>
       <a href="#destinations">יעדים</a>
       <a href="#hotels">מלונות</a>
       <a href="#flights">טיסות</a>
+      <a href="#attractions">אטרקציות</a>
+      <a href="#transfers">העברות</a>
       <img src="logo.png" alt="Travel Siam" class="logo" />
     </nav>
 
@@ -94,8 +105,10 @@
 
   <main>
     <h1>ברוכים הבאים לטראוול סיאם</h1>
-    <p>האתר המוביל לטיולים מותאמים אישית בתאילנד...</p>
-    <!-- שאר התוכן כאן -->
+    <p>האתר המוביל לטיולים מותאמים אישית בתאילנד – כאן תמצאו את כל המידע על היעדים, המלונות, הטיסות והאטרקציות.</p>
+
+    <!-- תוכן נוסף יתווסף כאן בהמשך -->
   </main>
+
 </body>
 </html>
