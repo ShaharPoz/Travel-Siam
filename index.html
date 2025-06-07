@@ -9,42 +9,40 @@
     margin: 0;
     font-family: Arial, sans-serif;
     direction: rtl;
-    background-color: #4AC6B7; /* ירוק טרופי */
-  }
-  /* לוגו בראש הדף עם רקע משלו */
-  .logo-top {
     background-color: #ffffff;
-    padding: 15px 20px;
-    text-align: center;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-  }
-  .logo-top img {
-    height: 70px;
-    vertical-align: middle;
   }
 
-  /* סרגל ניווט מתחת */
+  /* סרגל ניווט עם רקע טורקיז */
   nav {
-    background-color: #ffffff;
+    background-color: #4AC6B7; /* טורקיז רך */
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     display: flex;
+    align-items: center;
     justify-content: center;
-    padding: 12px 0;
     gap: 2rem;
+    padding: 10px 20px;
     position: sticky;
     top: 0;
     z-index: 1000;
   }
+
+  /* הלוגו בתוך הסרגל */
+  nav .logo {
+    height: 70px; /* הגודל של הלוגו בשורה */
+    margin-left: 20px; /* ריווח בין הלוגו לכפתורים (בגלל RTL - זה מצד שמאל) */
+  }
+
   nav a {
-    color: #333;
+    color: white;
     text-decoration: none;
     font-weight: 700;
     padding: 8px 15px;
     border-radius: 5px;
     transition: background-color 0.3s ease;
   }
+
   nav a:hover {
-    background-color: #276b3d; /* ירוק כהה בהיר */
+    background-color: #389b93; /* ירוק טורקיז כהה יותר */
     color: white;
   }
 
@@ -68,7 +66,6 @@
     object-fit: cover;
     filter: brightness(0.75);
   }
-
   /* טקסט מעל הוידאו */
   .video-content {
     position: relative;
@@ -83,13 +80,9 @@
 </head>
 <body>
 
-<!-- לוגו בראש -->
-<div class="logo-top">
-  <img src="logo.png" alt="Travel Siam Logo" />
-</div>
-
-<!-- סרגל ניווט -->
+<!-- סרגל ניווט עם הלוגו -->
 <nav>
+  <img class="logo" src="logo.png" alt="Travel Siam Logo" />
   <a href="#destinations">יעדים</a>
   <a href="#hotels">מלונות</a>
   <a href="#flights-domestic">טיסות פנים</a>
