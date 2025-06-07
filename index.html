@@ -13,7 +13,7 @@
   }
 
   nav {
-    background-color: white;
+    background-color: white; /* רקע לבן */
     display: flex;
     align-items: center;
     padding: 10px 20px;
@@ -21,10 +21,11 @@
     top: 0;
     z-index: 1000;
     direction: rtl;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* הצללה עדינה */
   }
 
   .logo-container {
-    background-color: #4AC6B7; /* אותו צבע כמו הסרגל */
+    background-color: white; /* רקע לבן תואם */
     padding: 5px 15px;
     display: flex;
     align-items: center;
@@ -44,16 +45,16 @@
   }
 
   nav a {
-    color: white;
+    color: black; /* שחור לכפתורים */
     text-decoration: none;
     font-weight: 700;
     padding: 8px 15px;
     border-radius: 5px;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, color 0.3s ease;
   }
 
   nav a:hover {
-    background-color: #389b93;
+    background-color: #4AC6B7; /* טורקיז בהיר בהובר */
     color: white;
   }
 
