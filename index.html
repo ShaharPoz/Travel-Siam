@@ -13,23 +13,26 @@
   }
 
   nav {
-    background-color: white; /* רקע לבן */
+    position: absolute; /* מעל הוידאו */
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.85); /* לבן חצי שקוף */
     display: flex;
     align-items: center;
     padding: 10px 20px;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+    z-index: 10;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     direction: rtl;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* הצללה עדינה */
   }
 
   .logo-container {
-    background-color: white; /* רקע לבן */
+    background-color: white; /* רקע לבן סביב הלוגו */
     padding: 5px 15px;
     display: flex;
     align-items: center;
     height: 90px;
+    border-radius: 8px;
   }
 
   .logo {
