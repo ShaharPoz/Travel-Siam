@@ -12,6 +12,14 @@
     background-color: #ffffff;
   }
 
+  /* מיכל משותף לוידאו ולניווט */
+  .video-wrapper {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+  }
+
   nav {
     position: absolute; /* מעל הוידאו */
     top: 0;
@@ -61,13 +69,6 @@
     color: black; /* טקסט שחור גם בהובר */
   }
 
-  /* וידאו רקע */
-  .video-background {
-    position: relative;
-    width: 100%;
-    height: 400px;
-    overflow: hidden;
-  }
   .video-background video {
     position: absolute;
     top: 50%;
@@ -77,10 +78,11 @@
     width: auto;
     height: auto;
     transform: translate(-50%, -50%);
-    z-index: -1;
+    z-index: 1; /* נמוך מהניווט */
     object-fit: cover;
     filter: brightness(0.75);
   }
+
   /* טקסט מעל הוידאו */
   .video-content {
     position: relative;
@@ -90,6 +92,7 @@
     font-size: 2.2rem;
     font-weight: bold;
     text-shadow: 1px 1px 8px rgba(0,0,0,0.7);
+    z-index: 5; /* מעל הוידאו, מתחת לניווט */
   }
 
   /* תוכן נוסף */
@@ -102,26 +105,29 @@
 </head>
 <body>
 
-<nav>
-  <div class="logo-container">
-    <img class="logo" src="logo.png" alt="Travel Siam Logo" />
-  </div>
-  <div class="menu">
-    <a href="#destinations">יעדים</a>
-    <a href="#hotels">מלונות</a>
-    <a href="#flights-domestic">טיסות פנים</a>
-    <a href="#flights-international">טיסות לתאילנד</a>
-    <a href="#attractions">אטרקציות</a>
-    <a href="#transfers">העברות</a>
-  </div>
-</nav>
+<div class="video-wrapper">
+  <nav>
+    <div class="logo-container">
+      <img class="logo" src="logo.png" alt="Travel Siam Logo" />
+    </div>
+    <div class="menu">
+      <a href="#destinations">יעדים</a>
+      <a href="#hotels">מלונות</a>
+      <a href="#flights-domestic">טיסות פנים</a>
+      <a href="#flights-international">טיסות לתאילנד</a>
+      <a href="#attractions">אטרקציות</a>
+      <a href="#transfers">העברות</a>
+    </div>
+  </nav>
 
-<div class="video-background">
-  <video autoplay muted loop playsinline>
-    <source src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.webm" type="video/webm" />
-    <source src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4" type="video/mp4" />
-    הדפדפן שלך אינו תומך בוידאו.
-  </video>
+  <div class="video-background">
+    <video autoplay muted loop playsinline>
+      <source src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.webm" type="video/webm" />
+      <source src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4" type="video/mp4" />
+      הדפדפן שלך אינו תומך בוידאו.
+    </video>
+  </div>
+
   <div class="video-content">
     ברוכים הבאים לטראוול סיאם - טיולים מותאמים אישית בתאילנד
   </div>
